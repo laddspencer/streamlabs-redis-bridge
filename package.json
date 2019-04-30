@@ -1,13 +1,13 @@
 {
-  "name": "streamlabs",
+  "name": "streamlabs-redis-bridge",
   "version": "1.0.0",
-  "description": "Streamlabs event publisher.",
+  "description": "Interface to Streamlabs events via Redis pub/sub.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ladd Spencer",
-  "license": "ISC",
+  "author": "Joe Terranova",
+  "license": "MIT",
   "dependencies": {
     "fancy-log": "^1.3.3",
     "redis": "^2.8.0",
