@@ -150,7 +150,7 @@ function reqLaunch(launchArg) {
 }
 
 function launch(config) {
-  let creds = getCreds(config.creds_path);
+  let creds = getCreds(config['streamlabs']['creds_path']);
   let publisher = new StreamlabsEventPublisher(config.redis.hostname,
                                                config.redis.port,
                                                config.redis.channel_prefix);
