@@ -16,10 +16,12 @@ const StreamlabsEventPublisher = require('./event_publisher');
 
 const defaultConfigPath = 'config.json';
 const defaultConfig = {
-  credsPath: './creds.json',
   redis: {
     hostname: 'localhost',
     port: '6379'
+  },
+  streamlabs: {
+    creds_path: './creds.json',  
   }
 };
 //----------------------------------------------------------------
@@ -148,7 +150,7 @@ function reqLaunch(launchArg) {
 }
 
 function launch(config) {
-  let creds = getCreds(config.credsPath);
+  let creds = getCreds(config.creds_path);
   let publisher = new StreamlabsEventPublisher(config.redis.hostname,
                                                config.redis.port,
                                                config.redis.channel_prefix);

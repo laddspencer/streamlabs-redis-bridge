@@ -16,7 +16,7 @@ const BITS_EVENT = 'bits';
 // Maps Streamlabs events to Redis channels.
 module.exports = class StreamlabsEventPublisher {
   constructor(redisHost, redisPort, channelPrefix) {
-    this.streamlabsChannelPrefix = `${channelPrefix}.streamlabs`;
+    this.streamlabsChannelPrefix = (!channelPrefix)?('streamlabs'):(`${channelPrefix}.streamlabs`);
     this.handlerMap = {
       [FOLLOW_EVENT]: this.onFollowHandler.bind(this),
       [DONATION_EVENT]: this.onDonationHandler.bind(this),
