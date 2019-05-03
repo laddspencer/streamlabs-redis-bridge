@@ -5,7 +5,7 @@ Creates an interface to Streamlabs events via Redis pub/sub.
 This follows from [twitch-redis-bridge](https://github.com/laddspencer/twitch-redis-bridge). The idea is similar in that we are simply forwarding web events (donations and follows in this case) to Redis.
 
 ## Configuration
-A sample config file ([config_sample.json](https://github.com/laddspencer/streamlabs-redis-bridge/blob/master/config_sample.json)) is include in the source tree; use this as the basis for your own.
+A sample config file ([config_sample.json](https://github.com/laddspencer/streamlabs-redis-bridge/blob/master/config_sample.json)) is included in the source tree; use this as the basis for your own.
 ```
 {
   "redis": {
